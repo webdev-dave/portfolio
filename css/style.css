@@ -1,4 +1,279 @@
-/* colors */
+/* ---------------------------------universal styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 1.3rem;
+}
+
+nav .logo-container {
+    max-width: 6rem;
+}
+
+nav img {
+    width: 100%;
+}
+
+nav .contact-button {
+    padding: 1rem;
+    color: white;
+    background-color: #0C6567;
+    border-radius: 10%;
+    margin: 0.3rem;
+}
+
+/*---------------------------------------- Main Hero */
+.main-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE8D3;
+    padding: 2.5rem;
+}
+
+.main-hero .profile-frame {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: solid 1px #CCDFD5;
+    height: 90px;
+    width: 90px;
+    margin-top: 1rem;
+}
+
+.profile-frame img {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.main-hero h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/* --------------------------------------------Main Block */
+
+.main-block-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 15%;
+    margin: 0 6rem;
+    padding: 2.5rem;
+    line-height: 1.75rem;
+}
+
+.main-block-container .about-me {
+    flex: 1 1 50%;
+    min-width: 25ch;
+}
+
+.main-block-container .skills {
+    flex: 1 1 15%;
+    min-width: 15ch;
+}
+
+/* .skills .skill-icon-container {
+    display: flex;
+    flex-direction: column;
+} */
+
+.skills i {
+    font-size: 2rem;
+    color: #0C6567;
+}
+
+.main-block-container h3 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/*--------------------------------------------Portfolio Section */
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #7AA8B6;
+}
+
+.portfolio-section h2 {
+    padding-bottom: 1.5rem;
+}
+
+
+
+.portfolio-section .portfolio-grid-container {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: stretch;
+    justify-items: center;
+    max-width: fit-content;
+}
+
+.portfolio-grid-container .grid-child {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.portfolio-grid-container h4 {
+    padding: 1rem 0;
+    background-color: #ccc;
+}
+
+.portfolio-grid-container img {
+    max-width: 100%;
+  }
+
+.portfolio-section .quote-button {
+    background-color: #8A1E00;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+
+/* ------------------------------------------------Contact Section */
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    column-gap: 15%;
+    padding: 2rem;
+    background-color: #0C6567;
+    color: white;
+}
+
+.contact-container .grid-form {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "fname lname"
+        "email telnum"
+        "message message";
+}
+
+.grid-form .fname {
+    grid-area: fname;
+}
+
+.grid-form .lname {
+    grid-area: lname;
+}
+
+.grid-form .email {
+    grid-area: email;
+}
+
+.grid-form .telnum {
+    grid-area: telnum;
+}
+
+.grid-form .message {
+    grid-area: message;
+}
+
+.message textarea[name=message] {
+    width: 100%;
+}
+
+
+
+
+
+/*----------------------------------- Social Meadia */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.social-container h5 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0C6567;
+    padding: 0.8rem 0 0;
+}
+
+.social-container .social-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.social-container i {
+    color: #0C6567;
+    font-size: 2rem;
+    padding: 0.8rem;
+}
+
+
+/* ---------------------------------------- Footer */
+
+footer {
+    background-color: #0C6567;
+    color: white;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------- colors */
 .joy-colors {
     background-color: #FACDCB;
     background-color: #CCDFD5;
