@@ -7,20 +7,17 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/073f01e88c.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
     <title>David's Portfolio</title>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
             <li><a href="html/portfolio.html">Portfolio</a></li>
-            <li><a href="#">Hobbies</a></li>
+            <li id="hobbies"><a href="https://www.instagram.com/abztract_photography/" target="_blank">Hobbies</a></li>
         </ul>
-        <!-- <div class="logo-container">
-            <img src="images/placeholder-logo.png" alt="logo">
-        </div> -->
-        <a href="#"><div class="contact-button">Contact</div></a>
+        <a href="#contact-form"><div class="contact-button btn" id="click">Contact</div></a>
     </nav>
 
     <div class="main-hero">
@@ -28,13 +25,15 @@
             <img src="images/portfolio-profile pic.jpg" alt="profile picture">
         </div>
         <h1>David Richard</h1>
-        <h2>Lorem ipsum dolor: 
-        <br>  sit amet consectetur adipiscing elit. Invidiosum nomen</h2>
+        <h2>Front-end 
+        <br>  Web Developer</h2>
     </div>
     <div class="main-block-container">
         <div class="about-me">
             <h3>About me</h3>
-            <p>Lorem ipsum dolor sit amet: consectetur adipiscing elit. Praeclare hoc quidem. Audeo dicere, inquit. <a href="http://loripsum.net/" target="_blank">Quae cum dixisset, finem ille.</a> Duo Reges: constructio interrete. Si longus, levis dictata sunt. Collatio igitur ista te nihil iuvat. At, si voluptas esset bonum, desideraret. Ut optime, secundum naturam affectum esse possit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur. Hoc est non dividere, sed frangere. Quis Aristidem non mortuum diligit? <a href="http://loripsum.net/" target="_blank">Illis videtur, qui illud non dubitant bonum dicere -;</a>
+            <p>Lorem ipsum dolor sit amet: consectetur adipiscing elit. Praeclare hoc quidem. Audeo dicere, inquit. <a href="http://loripsum.net/" target="_blank">Quae cum dixisset, finem ille.</a> Duo Reges: constructio interrete. Si longus, levis dictata sunt. Collatio igitur ista te nihil iuvat. At, si voluptas esset bonum, desideraret. Ut optime, secundum naturam affectum esse possit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur. Hoc est non dividere, sed frangere. Quis Aristidem non mortuum diligit? <a href="http://loripsum.net/" target="_blank">Illis videtur, qui illud non dubitant bonum dicere -;</a> <br><br>
+            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
             </p>
         </div>
         <div class="skills">
@@ -51,7 +50,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Post enim Chrysippum eum non sane est disputatum. Quis enim redargueret? Sed mehercule pergrata mihi oratio tua. Nemo igitur esse beatus potest. Duo Reges: constructio interrete. </p>
         </div>
     </div>
-    <div class="contact-container">
+    <div class="contact-container" id="contact-form">
         <form action="">
             <h4>Let's Work Together!</h4><br>
             <div class="grid-form">
@@ -76,19 +75,19 @@
                     <textarea name="message" id="message" maxlength="5000"></textarea><br>
                 </div>
             </div><br>
-            <input type="submit" vaue="Submit">
+            <input type="submit" value="Submit" class="submit-button btn">
         </form>
     </div>
     <div class="social-container">
         <h5>Say hello:</h5>
         <div class="icon-container">
-            <i class="fab fa-brands fa-instagram-square"></i>
-            <i class="fab fa-brands fa-facebook-square"></i>
-            <i class="fab fa-brands fa-linkedin"></i>
+            <a href="https://github.com/E-D-Richard" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/david-richard-1046a2235/" target="_blank"><i class="fab fa-brands fa-linkedin"></i></a>
+            <a href="mailto:elidovrich.coding@gmail.com" target="_blank"><i class="fas fa-envelope-square icon"></i></a>
         </div>
     </div>
     <footer>
-        <p>Copyright 2022</p>
+        <p>Copyright © 2022 | David Richard</p>
     </footer>
 </body>
 </html>

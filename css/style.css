@@ -1,3 +1,15 @@
+/*----------------------------------------------- colors */
+
+.my-colors {
+    background-color: #0C6567;
+    background-color: #ABCACB;
+    background-color: #962100;
+    background-color: #D74636;
+    background-color: #00C598;
+}
+
+
+
 /* ---------------------------------universal styles */
 * {
     box-sizing: border-box;
@@ -5,6 +17,8 @@
 
 html {
     font-size: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,10 +37,15 @@ h4 {
     text-align: center;
 }
 
-/* nav */
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* --------------------------------------- nav -------*/
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.2rem;
     background-color: white;
 }
@@ -36,8 +55,13 @@ nav ul {
     list-style-type: none;
 }
 
-nav li {
+nav li a{
     padding: 1.3rem;
+    transition: color 0.6s ease;
+}
+
+nav li a:hover {
+    color: #D74636;
 }
 
 nav .logo-container {
@@ -54,6 +78,34 @@ nav .contact-button {
     background-color: #0C6567;
     border-radius: 10%;
     margin: 0.3rem;
+    transition: background-color 0.5s ease;
+}
+
+nav .contact-button:hover {
+    background-color: #617C7C;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    
+    nav li a {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    nav .contact-button {
+        padding: 0.5rem 0.6rem;
+        margin-right: 0.1rem;
+        border-radius: 9px;
+        font-size: 0.9rem;
+    }
+
+    nav #hobbies {
+        display: none;
+    }
+
 }
 
 /*---------------------------------------- Main Hero */
@@ -62,7 +114,7 @@ nav .contact-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFE8D3;
+    background-color: #ABCACB;
     padding: 2.5rem;
 }
 
@@ -70,7 +122,7 @@ nav .contact-button {
     display: flex;
     justify-content: center;
     border-radius: 50%;
-    border: solid 1px #CCDFD5;
+    /* border: solid 1px #CCDFD5; */
     height: 90px;
     width: 90px;
     margin-top: 1rem;
@@ -89,21 +141,34 @@ nav .contact-button {
     margin: 0.5rem 0;
 }
 
+@media only screen and (max-width: 500px) {
+    .main-hero h1 {
+        font-size: 2.5rem;
+    }
+    .main-hero h2 {
+        font-size: 2rem;
+    }
+}
+
+
 /* --------------------------------------------Main Block */
 
 .main-block-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    column-gap: 15%;
-    margin: 0 6rem;
-    padding: 2.5rem;
+    column-gap: 20%;
+    padding: 5% 20%;
     line-height: 1.75rem;
 }
 
 .main-block-container .about-me {
     flex: 1 1 50%;
-    min-width: 25ch;
+}
+
+.main-block-container .about-me a {
+    text-decoration: underline;
+    color: #428672;
 }
 
 .main-block-container .skills {
@@ -111,10 +176,6 @@ nav .contact-button {
     min-width: 15ch;
 }
 
-/* .skills .skill-icon-container {
-    display: flex;
-    flex-direction: column;
-} */
 
 .skills i {
     font-size: 2rem;
@@ -126,6 +187,16 @@ nav .contact-button {
     margin: 1.5rem 0 1rem 0;
 }
 
+@media only screen and (max-width: 768px) {
+    .main-block-container {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .main-block-container .skills {
+        padding: 4rem 0 3rem;
+    }
+}
+
 /*--------------------------------------------Portfolio Section */
 
 .portfolio-section {
@@ -133,19 +204,22 @@ nav .contact-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
-    background-color: #7AA8B6;
+    padding: 10%;
+    background-color: #ABCACB;
 }
 
-.portfolio-section h2 {
-    padding-bottom: 1.5rem;
+.portfolio-section h1 {
+    padding: 1rem 0 3.5rem;
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: #294B4D;
 }
 
 
 
 .portfolio-section .portfolio-grid-container {
     display: grid;
-    grid-gap: 1.5rem;
+    grid-gap: 3rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: stretch;
@@ -154,13 +228,13 @@ nav .contact-button {
 }
 
 .portfolio-grid-container .grid-child {
-    border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 
 .portfolio-grid-container h4 {
-    padding: 1rem 0;
-    background-color: #ccc;
+    padding: 1rem;
+    background-color: #0C6567;
+    color: white;
 }
 
 .portfolio-grid-container img {
@@ -168,24 +242,70 @@ nav .contact-button {
   }
 
 .portfolio-section .quote-button {
-    background-color: #8A1E00;
+    background-color: #D74636;
     color: white;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    font-size: 1.5rem;
     padding: 0.8rem;
-    border-radius: 5px;
-    margin-top: 2rem;
+    border-radius: 10px;
+    margin-top: 5rem;
+    transition: background-color 0.7s ease;
 }
 
+.portfolio-section .quote-button:hover {
+    background-color: #617C7C;
+}
 
+@media only screen and (max-width: 768px) {
+    .portfolio-section {
+        padding: 15%;
+    }
+    .portfolio-section h1 {
+        font-size: 3rem;
+        padding: 1rem 0 2rem;
+    }
+    .portfolio-section .portfolio-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .portfolio-section h1 {
+        font-size: 2.5rem;
+        padding: 1rem 0 2rem;
+    }
+
+    .portfolio-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-section .quote-button {
+        margin: 3.5rem 0 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+ 
+    .portfolio-section .quote-button {
+        margin: 2.5rem 0 1rem;
+        font-size: 1rem;
+    }
+}
 /* ------------------------------------------------Contact Section */
 
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: center;
     column-gap: 15%;
     padding: 2rem;
     background-color: #0C6567;
     color: white;
+}
+
+.contact-container form {
+    display: inline-block;
 }
 
 .contact-container .grid-form {
@@ -199,7 +319,7 @@ nav .contact-button {
         "message message";
 }
 
-.grid-form .fname {
+.grid-form .fname{
     grid-area: fname;
 }
 
@@ -223,8 +343,43 @@ nav .contact-button {
     width: 100%;
 }
 
+.contact-container .submit-button {
+    background-color: #D74636;
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.contact-container .submit-button:hover {
+    background-color: #617C7C;
+    /* color: #0C6567; */
+    cursor: pointer;
+}
 
 
+@media only screen and (max-width: 540px){
+    .contact-container .grid-form {
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "fname"
+            "lname"
+            "email"
+            "telnum"
+            "message";
+    }
+    .grid-form input {
+        width: 100%;
+    }
+    .contact-container .submit-button {
+     width: 100%;
+    }
+}
 
 
 /*----------------------------------- Social Meadia */
@@ -232,12 +387,11 @@ nav .contact-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .social-container h5 {
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 600;
     color: #0C6567;
     padding: 0.8rem 0 0;
 }
@@ -264,24 +418,3 @@ footer {
     font-size: 0.8rem;
 }
 
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------- colors */
-.joy-colors {
-    background-color: #FACDCB;
-    background-color: #CCDFD5;
-    background-color: #0C6567;
-    /* background-color: #FDDEC0; */
-    color: #183843;
-}
-
-.my-colors {
-    background-color: #FADADD;
-}
