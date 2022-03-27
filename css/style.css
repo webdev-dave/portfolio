@@ -56,12 +56,13 @@ nav ul {
 }
 
 nav li a{
-    padding: 1.3rem;
-    transition: color 0.6s ease;
+    margin: 1.3rem;
+    padding-bottom: 0.2rem;
+    transition: border-bottom 0.3s;
 }
 
 nav li a:hover {
-    color: #D74636;
+    border-bottom: 5px solid #D74636;
 }
 
 nav .logo-container {
@@ -82,7 +83,7 @@ nav .contact-button {
 }
 
 nav .contact-button:hover {
-    background-color: #617C7C;
+    background-color: #198576;
 }
 
 
@@ -139,6 +140,20 @@ nav .contact-button:hover {
     text-align: center;
     font-weight: 600;
     margin: 0.5rem 0;
+}
+
+.main-hero .portfolio-btn {
+    padding: 1rem;
+    background-color: #0C6567;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 5%;
+    transition: background-color 0.5s ease;
+    display: none;
+}
+
+.main-hero .portfolio-btn:hover {
+    background-color: #198576;
 }
 
 @media only screen and (max-width: 500px) {
@@ -213,6 +228,7 @@ nav .contact-button:hover {
     font-weight: 600;
     font-size: 3.5rem;
     color: #294B4D;
+    letter-spacing: 0.4ch;
 }
 
 
@@ -229,17 +245,80 @@ nav .contact-button:hover {
 
 .portfolio-grid-container .grid-child {
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    position: relative;
+    background-color: #fff;
 }
 
-.portfolio-grid-container h4 {
-    padding: 1rem;
-    background-color: #0C6567;
-    color: white;
-}
 
 .portfolio-grid-container img {
+    display: block;
     max-width: 100%;
+    opacity: 1;
+    transition: opacity 0.6s ease;
   }
+
+.portfolio-grid-container .button-overlay {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    padding: 3%;
+    opacity: 0;
+    transition: opacity 0.6s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+    color: #0C6567;
+}
+
+.portfolio-grid-container .button-overlay:hover {
+    opacity: 1;
+}
+
+.portfolio-grid-container .grid-child:hover img {
+    opacity: 0.2;
+}
+
+.button-overlay .project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-description h4 {
+    font-weight: 600;
+    padding-top: 5%;
+}
+
+.project-description p {
+    color: #000;
+    padding-top: 2%;
+}
+
+.button-overlay .btn-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8%;
+}
+
+.button-overlay .btn {
+    min-width: 10rem;
+    background-color: #0C6567;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0.4rem 1rem;
+    box-shadow: 2px 3px #494949;
+}
+
+.button-overlay .btn:active {
+    box-shadow: 0 0;
+}
 
 .portfolio-section .quote-button {
     background-color: #D74636;
@@ -283,6 +362,22 @@ nav .contact-button:hover {
         margin: 3.5rem 0 1rem;
         font-size: 1.3rem;
     }
+    .button-overlay .project-description h4 {
+        font-size: 1rem;
+    }
+    .button-overlay .project-description p {
+        font-size: 0.8rem;
+    }
+
+    .button-overlay .btn-container {
+        padding-top: 3%;
+
+    }
+
+    .button-overlay .btn {
+        margin-bottom: 1%;
+    }
+    
 }
 
 @media only screen and (max-width: 350px){
@@ -354,8 +449,8 @@ nav .contact-button:hover {
 }
 
 .contact-container .submit-button:hover {
-    background-color: #617C7C;
-    /* color: #0C6567; */
+    background-color: #ABCACB;
+    color: #0C6567;
     cursor: pointer;
 }
 
