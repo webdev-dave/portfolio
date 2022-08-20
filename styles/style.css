@@ -1,8 +1,21 @@
 /*----------------------------------------------- colors */
 
+:root {
+    --green: #0C6567;
+    --lightgreen: #ABCACB;
+    --darkgreen: #133b3b;
+    --orange: #D74636;
+    --gray: rgba(20, 28, 58, 0.5);
+    --shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+    --text-color: #141c3a;
+    --white: #ffffff;
+  }
+  
+
+
 .my-colors {
-    background-color: #0C6567;
-    background-color: #ABCACB;
+    
+
     background-color: #962100;
     background-color: #D74636;
     background-color: #00C598;
@@ -11,9 +24,13 @@
 
 
 /* ---------------------------------universal styles */
-* {
-    box-sizing: border-box;
-}
+html {
+	box-sizing: border-box;
+  }
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+
 
 html {
     font-size: 100%;
@@ -42,6 +59,14 @@ h4 {
 }
 
 /* --------------------------------------- nav -------*/
+
+header {
+    position: fixed;
+    width: 100%;
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -110,6 +135,9 @@ nav .contact-button:hover {
 }
 
 /*---------------------------------------- Main Hero */
+main {
+    margin-top: 80px;
+}
 .main-hero {
     display: flex;
     flex-direction: column;
@@ -143,13 +171,14 @@ nav .contact-button:hover {
 }
 
 .main-hero .portfolio-btn {
-    padding: 1rem;
-    background-color: #0C6567;
-    color: #fff;
+    background-color: #D74636;
+    color: white;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    font-size: 1.5rem;
+    padding: 0.8rem;
     border-radius: 10px;
-    margin-top: 5%;
-    transition: background-color 0.5s ease;
-    display: none;
+    margin-top: 5rem;
+    transition: background-color 0.7s ease;
 }
 
 .main-hero .portfolio-btn:hover {
@@ -219,16 +248,16 @@ nav .contact-button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10%;
-    background-color: #ABCACB;
+    padding: 0 10%;
+    background-color: var(--lightgreen);
 }
 
 .portfolio-section h1 {
-    padding: 1rem 0 3.5rem;
+    color: var(--darkgreen);
     font-weight: 600;
     font-size: 3.5rem;
-    color: #294B4D;
-    letter-spacing: 0.4ch;
+    margin: 3.5rem 0;
+    /* letter-spacing: 0.4ch; */
 }
 
 
@@ -236,7 +265,7 @@ nav .contact-button:hover {
 .portfolio-section .portfolio-grid-container {
     display: grid;
     grid-gap: 3rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     align-items: stretch;
     justify-items: center;
@@ -381,7 +410,6 @@ nav .contact-button:hover {
 }
 
 @media only screen and (max-width: 350px){
- 
     .portfolio-section .quote-button {
         margin: 2.5rem 0 1rem;
         font-size: 1rem;
@@ -477,9 +505,10 @@ nav .contact-button:hover {
 }
 
 
-/*----------------------------------- Social Meadia */
+/*----------------------------------- Social Media */
 .social-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -491,11 +520,6 @@ nav .contact-button:hover {
     padding: 0.8rem 0 0;
 }
 
-.social-container .social-container {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-}
 
 .social-container i {
     color: #0C6567;
@@ -504,7 +528,7 @@ nav .contact-button:hover {
 }
 
 
-/* ---------------------------------------- Footer */
+/* ------------------------------------------------------------------------------- Footer */
 
 footer {
     background-color: #0C6567;
