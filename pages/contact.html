@@ -6,47 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <script
+    src="https://kit.fontawesome.com/3fcea628de.js"
+    crossorigin="anonymous"
+  ></script>
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li id="hobbies">
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li id="hobbies">
 
-        </ul>
-        <a href="#contact-form"
-          ><div class="contact-button btn" id="click">Contact</div></a
-        >
-      </nav>
-    </header>
+      </ul>
+      <a href="#contact-form"
+        ><div class="contact-button btn" id="click">Contact</div></a
+      >
+    </nav>
+
     <main>
+      <header>
+        <h1>Let's Work Together!</h1>
+      </header>
       <div class="contact-container" id="contact-form">
         <form action="">
-          <h4>Let's Work Together!</h4>
+          
           <br />
           <div class="grid-form">
-            <div class="fname">
-              <label for="fname">First name:</label><br />
-              <input type="text" id="fname" name="fname" /><br />
+            <div class="name">
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" required /><br />
             </div>
-            <div class="lname">
-              <label for="lname">Last name:</label><br />
-              <input type="text" id="lname" name="lname" /><br />
+            <div class="telnum">
+              <label for="telnum">Number: </label><br />
+              <input type="tel" id="telnum" name="telnum" /><br />
             </div>
             <div class="email">
               <label for="email">Email:</label><br />
-              <input type="email" id="email" name="email" /><br />
+              <input type="email" id="email" name="email" required /><br />
             </div>
-            <div class="telnum">
-              <label for="telnum">Phone Number:</label><br />
-              <input type="tel" id="telnum" name="telnum" /><br />
-            </div>
+
             <div class="message">
               <label for="message">Message:</label><br />
-              <textarea name="message" id="message" maxlength="5000"></textarea
+              <textarea name="message" id="message" maxlength="5000" required></textarea
               ><br />
             </div>
           </div>
@@ -54,24 +58,36 @@
           <input type="submit" value="Submit" class="submit-button btn" />
         </form>
       </div>
+      <!-- <div>
+        <p>additional contact info</p>
+        <p>email: elidovrich.coding@gmail.com</p>
+        <p>phone: 646 708 2621</p>
+        <p>linkedin: </p>
+        <p>github: </p>
+      </div> -->
+
+    </main>
+    <footer>
       <div class="social-container">
-        <h5>Say hello:</h5>
+        <h5>Say Hello</h5>
         <div class="icon-container">
-          <a href="https://github.com/E-D-Richard" target="_blank"
-            ><i class="fab fa-github-square"></i
-          ></a>
+          <a href="https://github.com/webdev-dave" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
           <a
             href="https://www.linkedin.com/in/david-richard-1046a2235/"
             target="_blank"
-            ><i class="fab fa-brands fa-linkedin"></i
-          ></a>
-          <a href="mailto:elidovrich.coding@gmail.com" target="_blank"
-            ><i class="fas fa-envelope-square icon"></i
-          ></a>
+            >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/16467082621" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:elidovrich.coding@gmail.com" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
         </div>
       </div>
-    </main>
-    <footer>
       <p>Copyright © 2022 | David Richard</p>
     </footer>
   </body>

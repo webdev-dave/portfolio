@@ -33,21 +33,26 @@ html {
 
 
 html {
+    height: 100%;
     font-size: 100%;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
 
 }
+
 
 h2 {
     font-size: 2rem;
     text-align: center;
 }
+
+
 
 h4 {
     font-size: 1.5rem;
@@ -61,13 +66,14 @@ h4 {
 /* --------------------------------------- nav -------*/
 
 header {
+    padding-top: 80px;
+}
+
+nav {
     position: fixed;
     width: 100%;
     box-shadow: var(--shadow);
     z-index: 1;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -135,9 +141,7 @@ nav .contact-button:hover {
 }
 
 /*---------------------------------------- Main Hero */
-main {
-    margin-top: 80px;
-}
+
 .main-hero {
     display: flex;
     flex-direction: column;
@@ -201,8 +205,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    column-gap: 20%;
-    padding: 5% 20%;
+    column-gap: 25%;
+    padding: 5% 15%;
     line-height: 1.75rem;
 }
 
@@ -210,26 +214,68 @@ main {
     flex: 1 1 50%;
 }
 
-.main-block-container .about-me a {
+.about-me a {
     text-decoration: underline;
     color: #428672;
 }
 
+.about-me h3 {
+    font-size: 2rem;
+}
+
+
+
+/* ---------------------------------------------------  skills */
 .main-block-container .skills {
-    flex: 1 1 15%;
+    flex: 1 1 18%;
     min-width: 15ch;
 }
 
-
-.skills i {
-    font-size: 2rem;
-    color: #0C6567;
+.skills h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.4rem;
 }
 
-.main-block-container h3 {
-    font-size: 2rem;
-    margin: 1.5rem 0 1rem 0;
+ul.skill-icon-container {
+    display: grid;
+    grid-template-columns: 95px 95px;
+    grid-auto-rows: minmax(95px, auto);
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+
+} 
+
+.skills li {
+    color: var(--white);
+    background-color: var(--green);
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.8rem 0.5rem 0 0.5rem;
+
+
+
 }
+
+
+.skills i, .skills iconify-icon {
+    font-size: 1.6rem;
+    color: var(--white);
+    height: 32px;
+    
+}
+
+.skills li p {
+    font-size: 0.8rem;
+   
+
+    
+}
+
+
+
 
 @media only screen and (max-width: 768px) {
     .main-block-container {
@@ -400,96 +446,6 @@ main {
         font-size: 1rem;
     }
 }
-/* ------------------------------------------------Contact Section */
-
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 15%;
-    padding: 2rem;
-    background-color: #0C6567;
-    color: white;
-}
-
-.contact-container form {
-    display: inline-block;
-}
-
-.contact-container .grid-form {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "fname lname"
-        "email telnum"
-        "message message";
-}
-
-.grid-form .fname{
-    grid-area: fname;
-}
-
-.grid-form .lname {
-    grid-area: lname;
-}
-
-.grid-form .email {
-    grid-area: email;
-}
-
-.grid-form .telnum {
-    grid-area: telnum;
-}
-
-.grid-form .message {
-    grid-area: message;
-}
-
-.message textarea[name=message] {
-    width: 100%;
-}
-
-.contact-container .submit-button {
-    background-color: #D74636;
-    color: #fff;
-    padding: 0.4rem 1.2rem;
-    border-radius: 5px;
-    box-shadow: none;
-    border: 1px solid black;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.contact-container .submit-button:hover {
-    background-color: #ABCACB;
-    color: #0C6567;
-    cursor: pointer;
-}
-
-
-@media only screen and (max-width: 540px){
-    .contact-container .grid-form {
-        display: grid;
-        row-gap: 1rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "fname"
-            "lname"
-            "email"
-            "telnum"
-            "message";
-    }
-    .grid-form input {
-        width: 100%;
-    }
-    .contact-container .submit-button {
-     width: 100%;
-    }
-}
-
-
 
 
 /* ------------------------------------------------------------------------------- Footer */
@@ -512,7 +468,7 @@ footer {
 }
 
 .social-container h5 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--white);
     padding-bottom: 2rem;

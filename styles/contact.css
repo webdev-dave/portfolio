@@ -1,0 +1,112 @@
+:root {
+  --green: #0c6567;
+  --lightgreen: #abcacb;
+  --darkgreen: #133b3b;
+  --orange: #d74636;
+  --gray: rgba(20, 28, 58, 0.5);
+  --shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+  --text-color: #141c3a;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--lightgreen);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 3rem 0;
+
+}
+
+.contact-container {
+  padding: 2rem;
+  color: var(--darkgreen);
+}
+
+.contact-container form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-container .grid-form {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name telnum"
+    "email email"
+    "message message";
+    
+
+}
+
+.grid-form input {
+    width: 100%;
+    min-height: 38px;
+}
+
+.grid-form .fname {
+  grid-area: fname
+}
+
+.grid-form .lname {
+  grid-area: lname;
+}
+
+.grid-form .email {
+  grid-area: email;
+}
+
+.grid-form .telnum {
+  grid-area: telnum;
+}
+
+.grid-form .message {
+  grid-area: message;
+}
+
+.message textarea[name="message"] {
+  width: 100%;
+  min-height: 100px;
+}
+
+.contact-container .submit-button {
+  background-color: #d74636;
+  color: #fff;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid black;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.contact-container .submit-button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 540px) {
+  .contact-container .grid-form {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "fname"
+      "lname"
+      "email"
+      "telnum"
+      "message";
+  }
+  .grid-form input {
+    width: 100%;
+  }
+  .contact-container .submit-button {
+    width: 100%;
+  }
+}
