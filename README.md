@@ -11,3 +11,7 @@
 - Cleanup media queries and make mobile responsive
 - Activate Contact form (using the google sheets API)
 - Make Website Accessible
+
+## Bugs/Fix
+
+-if project photo doesn't load, then project item collapses
