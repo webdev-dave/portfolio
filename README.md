@@ -4,7 +4,7 @@
 
 ## Todo List
 
-- Add Projects into main page
+- Design/Style Project Images
 - Update Projects (link, screenshots, details/specs)
 - make mobile project btns visible
 - add about dropdown
@@ -14,4 +14,17 @@
 
 ## Bugs/Fix
 
--if project photo doesn't load, then project item collapses
+-if project photo doesn't load, then project item collapses 
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Node JS
+
+### Concepts Applied
+
+- working with api's (google sheets for form handling)
+- responsive design
+- accessibility
+- flexbox
