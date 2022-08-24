@@ -196,7 +196,7 @@ nav .contact-button:hover {
   transition: opacity 0.6s ease;
 }
 
-.project .button-overlay {
+.project .project-overlay {
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -212,17 +212,8 @@ nav .contact-button:hover {
   color: #0c6567;
 }
 
-.button-overlay:hover, .button-overlay:active {
-  opacity: 1;
-}
 
-.project:hover img, .project:active img {
-  opacity: 0.4;
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
-}
-
-.button-overlay .project-description {
+.project-overlay .project-description {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,13 +232,13 @@ nav .contact-button:hover {
   padding-top: 2%;
 }
 
-.button-overlay .btn-container {
+.project-overlay .btn-container {
   display: flex;
   flex-direction: column;
   padding-top: 8%;
 }
 
-.button-overlay .btn {
+.project-overlay .btn {
   min-width: 10rem;
   background-color: #0c6567;
   color: #fff;
@@ -259,11 +250,38 @@ nav .contact-button:hover {
   box-shadow: 2px 3px #494949;
 }
 
-.button-overlay .btn:active {
+.project-overlay:hover {
+  opacity: 1;
+}
+
+.project:hover img {
+  opacity: 0.4;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}
+
+
+.project-overlay .btn:hover, .project-overlay .btn:active {
   box-shadow: 0 0;
 }
 
-/* ------------------------------------------------------------------  skills */
+
+@media only screen and (max-width: 900px) {
+
+  .project:hover img {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+  }
+
+  .project img.fx {
+    opacity: 0.4;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+  }
+}
+
+/* -------------------------------------------------------------------------------  skills */
 
 .main-block-container .skills {
   background-color: var(--lightgreen);
