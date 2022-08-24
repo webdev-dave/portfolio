@@ -35,56 +35,69 @@ if (window.innerWidth <= 900) {
   console.log("desktop");
 }
 
-const hideDetails = (btnContainer, projDesc, projImg) => {
+const hideDetails = (proj, btnContainer, projDesc, projImg) => {
   btnContainer.style.display = "none";
   projDesc.style.display = "none";
+  proj.classList.remove("fx");
   projImg.classList.remove("fx");
 };
 
-const revealDetails = (btnContainer, projDesc, projImg) => {
+const revealDetails = (proj, btnContainer, projDesc, projImg) => {
   btnContainer.style.display = "flex";
   projDesc.style.display = "flex";
+  proj.classList.add("fx");
   projImg.classList.add("fx");
 };
 
+
+const handleBodyClick = () => {
+    projImgBudget.classList.remove("fx");
+    projImgJam.classList.remove("fx");
+    projImgReddit.classList.remove("fx");
+}
+
+document.body.addEventListener("click", handleBodyClick());
+
+
+
 budget.addEventListener("click", () => {
   if (budgetIsHidden) {
-    revealDetails(btnContainerBudget, projDescBudget, projImgBudget);
-    hideDetails(btnContainerJam, projDescJam, projImgJam);
-    hideDetails(btnContainerReddit, projDescReddit, projImgReddit);
+    revealDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
+    hideDetails(jam, btnContainerJam, projDescJam, projImgJam);
+    hideDetails(reddit, btnContainerReddit, projDescReddit, projImgReddit);
     budgetIsHidden = false;
     jamIsHidden = true;
     redditIsHidden = true;
   } else {
-    hideDetails(btnContainerBudget, projDescBudget, projImgBudget);
+    hideDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
     budgetIsHidden = true;
   }
 });
 
 jam.addEventListener("click", () => {
   if (jamIsHidden) {
-    revealDetails(btnContainerJam, projDescJam, projImgJam);
-    hideDetails(btnContainerBudget, projDescBudget, projImgBudget);
-    hideDetails(btnContainerReddit, projDescReddit, projImgReddit);
+    revealDetails(jam, btnContainerJam, projDescJam, projImgJam);
+    hideDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
+    hideDetails(reddit, btnContainerReddit, projDescReddit, projImgReddit);
     jamIsHidden = false;
     budgetIsHidden = true;
     redditIsHidden = true;
   } else {
-    hideDetails(btnContainerJam, projDescJam, projImgJam);
+    hideDetails(jam, btnContainerJam, projDescJam, projImgJam);
     jamIsHidden = true;
   }
 });
 
 reddit.addEventListener("click", () => {
   if (redditIsHidden) {
-    revealDetails(btnContainerReddit, projDescReddit, projImgReddit);
-    hideDetails(btnContainerJam, projDescJam, projImgJam);
-    hideDetails(btnContainerBudget, projDescBudget, projImgBudget);
+    revealDetails(reddit, btnContainerReddit, projDescReddit, projImgReddit);
+    hideDetails(jam, btnContainerJam, projDescJam, projImgJam);
+    hideDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
     redditIsHidden = false;
     budgetIsHidden = true;
     jamIsHidden = true;
   } else {
-    hideDetails(btnContainerReddit, projDescReddit, projImgReddit);
+    hideDetails(reddit, btnContainerReddit, projDescReddit, projImgReddit);
     redditIsHidden = true;
   }
 });

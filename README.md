@@ -14,7 +14,8 @@
 
 ## Bugs/Fix
 
--if project photo doesn't load, then project item collapses 
+- in mobile mode, when project details disappear they don't fade away (no animation)
+- in mobile mode - figure out how to make project details disappear on surrounding body click
 
 ### Languages & Frameworks
 
