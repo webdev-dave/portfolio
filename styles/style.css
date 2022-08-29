@@ -61,8 +61,10 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  min-height: 80px;
   box-shadow: var(--shadow);
   z-index: 1;
+  background-color: white;
 }
 
 nav {
@@ -70,7 +72,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem;
-  background-color: white;
 }
 
 nav ul {
