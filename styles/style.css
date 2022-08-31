@@ -61,13 +61,14 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  min-height: 80px;
+  
   box-shadow: var(--shadow);
   z-index: 1;
   background-color: white;
 }
 
 nav {
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -353,14 +354,14 @@ ul.skill-icon-container {
 footer {
   background-color: #0c6567;
   color: white;
-  padding: 0.2rem;
+  padding: 0.4rem ;
   font-size: 0.8rem;
 }
 
 /*--------------------------------- Social Media */
 .social-container {
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .social-container h5 {
@@ -389,4 +390,9 @@ footer {
 .icon-container i:hover {
   color: #729ea0;
   border-color: #779d9f;
+}
+
+footer #copyright {
+  text-align: center;
+  padding-top: 1rem;
 }

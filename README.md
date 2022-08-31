@@ -3,7 +3,7 @@
 [View Live Website](https://daverich.dev)
 
 ## Todo List
-
+- Add padding/margins to project details
 - Cleanup media queries and complete responsive design
 - Add about info
 - beautify page layouts with additional spacing using margins and padding
