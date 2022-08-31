@@ -13,11 +13,14 @@ const reddit = document.getElementById("reddit-project-overlay");
 const btnContainerReddit = document.getElementById("reddit-btn-container");
 const projDescReddit = document.getElementById("reddit-project-description");
 
+let isMobile;
 let budgetIsHidden;
 let jamIsHidden;
 let redditIsHidden;
 
 if (window.innerWidth <= 900) {
+  console.log('script is running')
+  isMobile = true;
   btnContainerBudget.style.display = "none";
   projDescBudget.style.display = "none";
   budgetIsHidden = true;
@@ -33,7 +36,11 @@ if (window.innerWidth <= 900) {
   console.log("mobile");
 } else {
   console.log("desktop");
+  isMobile = false;
 }
+
+
+
 
 const hideDetails = (proj, btnContainer, projDesc, projImg) => {
   btnContainer.style.display = "none";
@@ -50,17 +57,17 @@ const revealDetails = (proj, btnContainer, projDesc, projImg) => {
 };
 
 
-const handleBodyClick = () => {
-    projImgBudget.classList.remove("fx");
-    projImgJam.classList.remove("fx");
-    projImgReddit.classList.remove("fx");
-}
+// const handleBodyClick = () => {
+//     projImgBudget.classList.remove("fx");
+//     projImgJam.classList.remove("fx");
+//     projImgReddit.classList.remove("fx");
+// }
 
-document.body.addEventListener("click", handleBodyClick());
+// document.body.addEventListener("click", handleBodyClick());
 
 
 
-budget.addEventListener("click", () => {
+isMobile && budget.addEventListener("click", () => {
   if (budgetIsHidden) {
     revealDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
     hideDetails(jam, btnContainerJam, projDescJam, projImgJam);
@@ -74,7 +81,7 @@ budget.addEventListener("click", () => {
   }
 });
 
-jam.addEventListener("click", () => {
+isMobile && jam.addEventListener("click", () => {
   if (jamIsHidden) {
     revealDetails(jam, btnContainerJam, projDescJam, projImgJam);
     hideDetails(budget, btnContainerBudget, projDescBudget, projImgBudget);
@@ -88,7 +95,7 @@ jam.addEventListener("click", () => {
   }
 });
 
-reddit.addEventListener("click", () => {
+isMobile && reddit.addEventListener("click", () => {
   if (redditIsHidden) {
     revealDetails(reddit, btnContainerReddit, projDescReddit, projImgReddit);
     hideDetails(jam, btnContainerJam, projDescJam, projImgJam);
@@ -101,3 +108,5 @@ reddit.addEventListener("click", () => {
     redditIsHidden = true;
   }
 });
+
+

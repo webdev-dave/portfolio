@@ -3,6 +3,7 @@
 :root {
   --green: #0c6567;
   --lightgreen: #abcacb;
+  --olivegreen: #5d847f
   --darkgreen: #133b3b;
   --orange: #d74636;
   /* --lightorange: #bfb29d; */
@@ -91,12 +92,15 @@ nav .contact-button {
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: #0c6567;
+  background-color: var(--green);
   border-radius: 10%;
   margin: 0.3rem;
   transition: background-color 0.5s ease;
 }
 
+nav .contact-button:hover {
+  background-color: #5d847f;
+}
 
 
 nav ul:hover #current-page {
@@ -108,9 +112,6 @@ nav ul:hover #current-page {
 }
 
 
-nav .contact-button:hover {
-  background-color: #198576;
-}
 
 /*------------------------------------------------- Main Hero */
 
@@ -204,21 +205,17 @@ main .projects {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  padding: 3%;
+  padding: 5% 6% 2% 6%;
   opacity: 0;
-  transition: opacity 4s ease;
+  
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   color: #0c6567;
 }
 
 .project-overlay .project-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -236,7 +233,7 @@ main .projects {
 .project-overlay .btn-container {
   display: flex;
   flex-direction: column;
-  padding-top: 8%;
+ 
 }
 
 .project-overlay .btn {
@@ -254,10 +251,12 @@ main .projects {
 .project .project-overlay.fx {
   opacity: 1;
   transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .project img.fx {
   opacity: 0.4;
+  transition: opacity 0.6s ease;
   filter: blur(6px);
   -webkit-filter: blur(6px);
 }
@@ -270,19 +269,7 @@ main .projects {
 /* desktop hover on projects */
 @media only screen and (min-width: 900px) {
   .project .project-overlay {
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    padding: 3%;
-    opacity: 0;
     transition: opacity 0.6s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: #0c6567;
   }
 
   .project-overlay:hover {
