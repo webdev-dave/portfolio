@@ -3,10 +3,10 @@
 [View Live Website](https://daverich.dev)
 
 ## Todo List
-- Add padding/margins to project details
+
 - Cleanup media queries and complete responsive design
 - Add about info
-- Fix form label padding
+- Fix form label padding?
 - beautify page layouts with additional spacing using margins and padding
 - Make Website Accessible
 
