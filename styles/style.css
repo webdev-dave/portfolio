@@ -88,8 +88,7 @@ nav li a {
 
 
 nav .contact-button {
-  min-height: 80%;
-  padding: 1rem;
+  padding: 20px;
   text-align: center;
   color: white;
   background-color: #0c6567;
