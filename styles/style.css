@@ -223,7 +223,9 @@ main .projects {
 .project-description h4 {
   color: var(--green);
   font-weight: 600;
-  padding-top: 5%;
+  padding-bottom: 1%;
+  padding-top: 4%;
+ 
 }
 
 .project-description p {
@@ -234,6 +236,8 @@ main .projects {
 .project-overlay .btn-container {
   display: flex;
   flex-direction: column;
+  padding-top: 8%;
+  padding-bottom: 4%;
  
 }
 
@@ -285,8 +289,7 @@ main .projects {
   }
 
   .project-overlay .btn-container {
-    padding-top: 8%;
-    padding-bottom: 4%;
+
   }
 }
 
