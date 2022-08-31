@@ -21,7 +21,7 @@ h1 {
     text-align: center;
     font-size: 3.5rem;
     font-weight: 600;
-    margin: 3rem 0;
+    margin: 3rem 2rem;
 
 }
 
@@ -47,6 +47,8 @@ h1 {
     
 
 }
+
+
 
 .grid-form input {
     width: 100%;
@@ -81,6 +83,8 @@ h1 {
 .contact-container .submit-button {
   background-color: #d74636;
   color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
   padding: 0.4rem 1.2rem;
   border-radius: 5px;
   box-shadow: none;
@@ -88,7 +92,7 @@ h1 {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.contact-container .submit-button:hover {
+.submit-button:hover {
   background-color: var(--green);
   color: var(--white);
   cursor: pointer;
@@ -112,5 +116,10 @@ h1 {
   }
   .contact-container .submit-button {
     width: 100%;
+  }
+  .submit-button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
   }
 }
