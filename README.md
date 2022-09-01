@@ -9,6 +9,7 @@
 - Fix form label padding?
 - beautify page layouts with additional spacing using margins and padding
 - Make Website Accessible
+- Cross Browser Testing (firefox, safari, brave, IE)
 
 ## Bugs/Must Fix
 

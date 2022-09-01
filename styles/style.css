@@ -39,17 +39,25 @@ h1 {
   font-size: 3.5rem;
   text-align: center;
   font-weight: 600;
+
 }
 
 h2 {
   font-size: 2rem;
   text-align: center;
+  line-height: 2.2rem;
 }
+
 
 h4 {
   font-size: 1.5rem;
   text-align: center;
+  
 }
+
+/* p {
+  line-height: 1.8rem;
+} */
 
 
 .btn:active {
@@ -142,8 +150,11 @@ nav ul:hover #current-page {
 }
 
 .main-hero h1 {
-  margin: 0.5rem 0;
+  margin: 1rem 0 1.2rem 0;
+  
 }
+
+
 
 .main-hero .portfolio-btn {
   background-color: #d74636;
@@ -205,11 +216,11 @@ main .projects {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  padding: 5% 6% 2% 6%;
-  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 6%;
+  opacity: 0;
   align-items: center;
   color: #0c6567;
 }
@@ -222,34 +233,37 @@ main .projects {
 
 .project-description h4 {
   color: var(--green);
+  font-size: 1.6rem;
   font-weight: 600;
-  padding-bottom: 1%;
-  padding-top: 4%;
+  padding: 20% 0 8% 0;
  
 }
 
 .project-description p {
   color: #000;
-  padding-top: 2%;
+  line-height: 1.4rem;
+  margin: 0 1rem;
 }
 
 .project-overlay .btn-container {
   display: flex;
-  flex-direction: column;
-  padding-top: 8%;
-  padding-bottom: 4%;
- 
+  width: 100%;
+  padding-bottom: 7%;
+}
+
+.btn-container .view {
+  display: none;
 }
 
 .project-overlay .btn {
-  min-width: 10rem;
+  width: 45%;
   background-color: #0c6567;
   color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
-  margin: 0.4rem 1rem;
+  margin: 0.4rem 0.5rem;
   box-shadow: 2px 3px #494949;
 }
 
@@ -260,40 +274,68 @@ main .projects {
 }
 
 .project img.fx {
-  opacity: 0.4;
+  opacity: 0.3;
   transition: opacity 0.6s ease;
   filter: blur(6px);
   -webkit-filter: blur(6px);
 }
+
+
+
+/* desktop hover on projects */
+@media only screen and (min-width: 900px) {
+  .project .project-overlay {
+    transition: opacity 0.6s ease;
+  }
+  .project-overlay:hover {
+    opacity: 1;
+  }
+
+  .project:hover img {
+    opacity: 0.3;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+  }
+
+  .project-description h4 {
+    font-size: clamp(1.6rem, 2.4vw , 2rem);
+    padding-top: 12%;
+    padding-bottom: 3%;
+  }
+  .project-description p {
+    margin: 0 0.5rem;
+
+  }
+  .project-overlay .btn-container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    margin: 0;
+  }
+
+  .btn-container .btn {
+    width: 60%;
+  }
+
+  .btn-container .view {
+    display: inline;
+  }
 
 .project-overlay .btn:hover,
 .project-overlay .btn:active {
   box-shadow: 0 0;
 }
 
-/* desktop hover on projects */
-@media only screen and (min-width: 900px) {
-  .project .project-overlay {
-    transition: opacity 0.6s ease;
-    justify-content: flex-end;
-  }
+}
 
-  .project-overlay:hover {
-    opacity: 1;
-  }
-
-  .project:hover img {
-    opacity: 0.4;
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
-  }
-
-  .project-overlay .btn-container {
-
+@media only screen and (min-width: 1300px){
+  .project-description h4 {
+    padding-top: clamp(12%, 4vw , 20%);
+    padding-bottom: clamp(6%, 1vw ,16%);
   }
 }
 
-/* -------------------------------------------------------------------------------  skills */
+/* -------------------------------------------------------------------------------  proficiencies */
 
 main .skills {
   background-color: var(--lightgreen);
@@ -302,7 +344,8 @@ main .skills {
 }
 
 .skills h3 {
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  /* font-size: clamp(1.5rem, 5vw, 2rem); */
+  font-size: 1.5rem;
   text-align: center;
   letter-spacing: 0.8px;
   margin: 2rem 1rem 3rem 1rem;
@@ -337,7 +380,7 @@ ul.skill-icon-container {
 
 .skills li p {
   font-size: 0.8rem;
-  margin-top: 12px;
+  margin-top: 0.8rem;
 }
 
 /* ------------------------------------------------------------------------------- Footer */
@@ -345,7 +388,7 @@ ul.skill-icon-container {
 footer {
   background-color: #0c6567;
   color: white;
-  padding: 0.4rem ;
+  padding: 0.1rem ;
   font-size: 0.8rem;
 }
 
@@ -379,11 +422,12 @@ footer {
 }
 
 .icon-container i:hover {
-  color: #729ea0;
-  border-color: #779d9f;
+  color: #d3f2f3;
+  border-color: #d3f2f3;
 }
 
 footer #copyright {
+  font-size: 0.6rem;
   text-align: center;
   padding-top: 1rem;
 }
