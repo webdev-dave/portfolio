@@ -1,14 +1,21 @@
 main {
-    padding: 8% clamp(8%, 10vw, 20%);
-    /* text-align: justify; */
+  padding: clamp(3rem, 8%, 4rem) clamp(8%, 10vw, 20%);
+  /* text-align: justify; */
 }
 
 h1 {
-    margin-bottom: 2.5rem;
+  font-size: clamp(2.5rem, 9vw, 3.5rem);
+  margin-bottom: clamp(3rem, 4vw, 6rem);
 }
 
 p {
-    margin: 1rem;
-    color: #141c3a;
-    line-height: 1.8rem;
+  margin: 1rem;
+  color: #141c3a;
+  line-height: 1.8rem;
+}
+
+#copyright {
+  color: #abcacb;
+  margin: 0;
+  line-height: normal;
 }

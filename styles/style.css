@@ -427,6 +427,7 @@ footer {
 }
 
 footer #copyright {
+  color: #abcacb;
   font-size: 0.6rem;
   text-align: center;
   padding-top: 1rem;
